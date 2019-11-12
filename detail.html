@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% load i18n %}
+{% load humanize %}
+{% block title %}My Blog{% endblock %}
+{% block content %}
+
+<p>{{ post.title }}</p>
+<p class="card-text">{{ post.body|truncatewords:30|linebreaks }}</p>
+
+{% endblock %}
